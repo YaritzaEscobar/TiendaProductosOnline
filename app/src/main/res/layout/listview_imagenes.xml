@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Grupo para organizar  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+       >
+
+        <!--Grupo el fondo de color  -->
+
+        <!--Grupo para  el lado derecho-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/backgroud_agregar"
+            android:layout_width="232dp"
+            android:layout_height="219dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProductoListVista"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginBottom="76dp"
+                android:src="@drawable/circular_background2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.833"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblCodigo"
+                android:layout_width="120dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="201dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:gravity="center"
+                android:text="Código"
+                android:textColor="@color/cream"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.413" />
+
+            <TextView
+                android:id="@+id/lblPrecio"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/imgProductoListVista"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:gravity="center_vertical"
+                android:text="Precio"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.212"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProductoListVista"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/lblStock"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/imgProductoListVista"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/raleway_semibold"
+                android:gravity="center_vertical"
+                android:text="Stock"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.69"
+                app:layout_constraintStart_toEndOf="@+id/lblPrecio"
+                app:layout_constraintTop_toBottomOf="@+id/imgProductoListVista"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/lblDescripcion"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center|fill_horizontal"
+            android:text="Descripcion"
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.651"
+            app:layout_constraintStart_toEndOf="@+id/backgroud_agregar"
+            app:layout_constraintTop_toBottomOf="@+id/lblMarca" />
+
+        <TextView
+            android:id="@+id/lblGanancia"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center_vertical"
+            android:text="Ganancia"
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toEndOf="@+id/lblCosto"
+            app:layout_constraintTop_toBottomOf="@+id/lblDescripcion"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/lblCosto"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center_vertical"
+            android:text="Costo"
+            android:textColor="@color/darkblue"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.137"
+            app:layout_constraintStart_toEndOf="@+id/backgroud_agregar"
+            app:layout_constraintTop_toBottomOf="@+id/lblDescripcion"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/lblMarca"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center_vertical"
+            android:text="Marca"
+            android:textColor="@color/darkblue"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toEndOf="@+id/backgroud_agregar"
+            app:layout_constraintTop_toBottomOf="@+id/lblNombre"
+            app:layout_constraintVertical_bias="0.012" />
+
+        <ImageView
+            android:id="@+id/lineavertical"
+            android:layout_width="156dp"
+            android:layout_height="2dp"
+            android:background="@color/red1"
+            app:layout_constraintBottom_toTopOf="@+id/lblDescripcion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toEndOf="@+id/backgroud_agregar"
+            app:layout_constraintTop_toBottomOf="@+id/lblNombre"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/lblNombre"
+            android:layout_width="156dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center_vertical"
+            android:text="Nombre"
+            android:textColor="@color/darkblue"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toEndOf="@+id/backgroud_agregar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.012" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

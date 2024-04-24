@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream"
+    tools:context=".MainActivity">
+
+    <!-- Agregar productos skincare-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- logo app -->
+    <ImageView
+        android:id="@+id/img_logolocion"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/icono_tienda_online" />
+
+    <!-- Agregar productos -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroud_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Img producto skincare -->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProductoVista"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/circular_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.163" />
+
+        <Button
+            android:id="@+id/btnCambiarImagen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_boton"
+            android:bottomRightRadius="20sp"
+            android:foreground="@drawable/camara_fotografica"
+            android:foregroundGravity="center"
+            android:foregroundTint="@color/darkblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.361"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.283" />
+
+
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:layout_width="200dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Código"
+            android:inputType="text"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.621"
+            app:layout_constraintStart_toEndOf="@+id/imgProductoVista"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14" />
+
+        <EditText
+            android:id="@+id/txtMarca"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Marca"
+            android:inputType="text"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="200dp"
+            android:layout_height="46dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.621"
+            app:layout_constraintStart_toEndOf="@+id/imgProductoVista"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodigo"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <EditText
+            android:id="@+id/txtCosto"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Costo"
+            android:inputType="numberDecimal"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarca"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <EditText
+            android:id="@+id/txtStock"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Stock"
+            android:inputType="number"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.695"
+            app:layout_constraintStart_toEndOf="@+id/txtCosto"
+            app:layout_constraintTop_toBottomOf="@+id/txtMarca"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <EditText
+            android:id="@+id/txtGanancia"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Ganancia"
+            android:inputType="numberDecimal"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCosto"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <EditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="325dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:textColor="@color/darkblue"
+            android:textColorHint="@color/blue"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGanancia"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <Button
+            android:id="@+id/btnGuardarProducto"
+            android:layout_width="224dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_boton2"
+            android:drawableStart="@drawable/crema_brilllo"
+            android:drawableTint="@color/red1"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="GUARDAR PRODUCTO"
+            android:textColor="@color/darkblue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
+            app:layout_constraintVertical_bias="0.446" />
+
+        <TextView
+            android:id="@+id/lbl_ttl_productos"
+            android:layout_width="291dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/kosmilk"
+            android:gravity="center"
+            android:text="AGREGAR PRODUCTOS"
+            android:textColor="@color/cream"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.975"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- boton regresar  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRegresarListaProductos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="@color/darkblue"
+        android:src="@drawable/flecha_izquierda"
+        android:drawableTint="@color/red3"/>
+
+
+
+</RelativeLayout>
