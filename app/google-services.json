@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "678561376669",
+    "firebase_url": "https://practicaprogra-44aff-default-rtdb.firebaseio.com",
+    "project_id": "practicaprogra-44aff",
+    "storage_bucket": "practicaprogra-44aff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678561376669:android:8e4a670f828c0288856774",
+        "android_client_info": {
+          "package_name": "com.ugb.tiendaproductosonline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxkVOeTYsHSeduVlTnNQ1zTuDtqmhGCkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
